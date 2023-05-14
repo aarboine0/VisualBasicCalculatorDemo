@@ -74,7 +74,11 @@ Partial Class Form1
         Label3 = New Label()
         Label4 = New Label()
         Panel1 = New Panel()
+        Label5 = New Label()
         Panel2 = New Panel()
+        CheckBox4 = New CheckBox()
+        CheckBox3 = New CheckBox()
+        CheckBox2 = New CheckBox()
         CheckBox1 = New CheckBox()
         Button37 = New Button()
         Button36 = New Button()
@@ -91,7 +95,7 @@ Partial Class Form1
         ' 
         Label1.BackColor = SystemColors.ButtonHighlight
         Label1.BorderStyle = BorderStyle.Fixed3D
-        Label1.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.ActiveCaptionText
         Label1.Location = New Point(43, 61)
         Label1.Margin = New Padding(5, 0, 5, 0)
@@ -318,7 +322,7 @@ Partial Class Form1
         ' 
         ' Button19
         ' 
-        Button19.ForeColor = SystemColors.ControlText
+        Button19.ForeColor = Color.DarkSlateGray
         Button19.Location = New Point(496, 163)
         Button19.Name = "Button19"
         Button19.Padding = New Padding(4)
@@ -532,6 +536,7 @@ Partial Class Form1
         ' 
         Panel1.BackColor = Color.Lavender
         Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(TextBox1)
         Panel1.Controls.Add(Panel2)
         Panel1.Controls.Add(Label4)
@@ -543,23 +548,64 @@ Partial Class Form1
         Panel1.Size = New Size(294, 349)
         Panel1.TabIndex = 43
         ' 
+        ' Label5
+        ' 
+        Label5.BorderStyle = BorderStyle.Fixed3D
+        Label5.Location = New Point(81, 255)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(123, 34)
+        Label5.TabIndex = 45
+        ' 
         ' Panel2
         ' 
         Panel2.BorderStyle = BorderStyle.Fixed3D
+        Panel2.Controls.Add(CheckBox4)
+        Panel2.Controls.Add(CheckBox3)
+        Panel2.Controls.Add(CheckBox2)
         Panel2.Controls.Add(CheckBox1)
         Panel2.Location = New Point(16, 125)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(260, 118)
         Panel2.TabIndex = 44
         ' 
+        ' CheckBox4
+        ' 
+        CheckBox4.AutoSize = True
+        CheckBox4.Location = New Point(16, 78)
+        CheckBox4.Name = "CheckBox4"
+        CheckBox4.Size = New Size(104, 29)
+        CheckBox4.TabIndex = 3
+        CheckBox4.Text = "to Kelvin"
+        CheckBox4.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox3
+        ' 
+        CheckBox3.AutoSize = True
+        CheckBox3.Location = New Point(16, 80)
+        CheckBox3.Name = "CheckBox3"
+        CheckBox3.Size = New Size(104, 29)
+        CheckBox3.TabIndex = 2
+        CheckBox3.Text = "to Kelvin"
+        CheckBox3.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Location = New Point(16, 43)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(206, 29)
+        CheckBox2.TabIndex = 1
+        CheckBox2.Text = "Celsius to Fahrenheit"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(29, 21)
+        CheckBox1.Location = New Point(16, 8)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(123, 29)
+        CheckBox1.Size = New Size(206, 29)
         CheckBox1.TabIndex = 0
-        CheckBox1.Text = "CheckBox1"
+        CheckBox1.Text = "Fahrenheit to Celsius"
         CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Button37
@@ -612,7 +658,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(11.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(11F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
         ClientSize = New Size(928, 484)
@@ -660,7 +706,8 @@ Partial Class Form1
         Controls.Add(MenuStrip1)
         Controls.Add(PictureBox1)
         DoubleBuffered = True
-        Font = New Font("Segoe UI", 14.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        ForeColor = Color.DarkSlateGray
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MainMenuStrip = MenuStrip1
         Margin = New Padding(5)
@@ -735,4 +782,8 @@ Partial Class Form1
     Friend WithEvents Button39 As Button
     Friend WithEvents Button40 As Button
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
 End Class

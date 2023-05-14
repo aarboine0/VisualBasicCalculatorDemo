@@ -5,6 +5,7 @@ Public Class Form1
     Dim f As Double
     Dim s As Double
     Dim ans As Double
+    Dim input As Double = 0
     Dim op As String
     Dim n As Int32
     Dim found As Boolean = False
@@ -69,6 +70,7 @@ Public Class Form1
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
         Label1.Text = "0"
+        input = 0
         Label2.Text = ""
     End Sub
 
@@ -86,41 +88,56 @@ Public Class Form1
     End Sub
 
     Private Sub arithmetic_function(sender As Object, e As EventArgs) Handles Button19.Click, Button18.Click, Button17.Click, Button21.Click, Button23.Click, Button32.Click
+
         Dim ops As Button = sender
-        f = Label1.Text
-        Label2.Text = Label1.Text
-        Label1.Text = ""
-        op = ops.Text
-        Label2.Text = Label2.Text + " " + op
+        If (input <> 0) Then
+            Button20.PerformClick()
+            found = True
+            op = ops.Text
+            Label2.Text = input & "   " & op
+        Else
+            op = ops.Text
+            input = Double.Parse(Label1.Text)
+            found = True
+            Label2.Text = input & "   " & op
+        End If
+
+
+
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
-        s = Label1.Text
-        If op = "+" Then
-            ans = f + s
-            Label1.Text = ans
-            Label2.Text = ""
-        ElseIf op = "-" Then
-            ans = f - s
-            Label1.Text = ans
-            Label2.Text = ""
-        ElseIf op = "*" Then
-            ans = f * s
-            Label1.Text = ans
-            Label2.Text = ""
-        ElseIf op = "/" Then
-            ans = f / s
-            Label1.Text = ans
-            Label2.Text = ""
-        ElseIf op = "MOD" Then
-            ans = f Mod s
-            Label1.Text = ans
-            Label2.Text = ""
-        ElseIf op = "^" Then
-            ans = f ^ s
-            Label1.Text = ans
-            Label2.Text = ""
+
+        If Label1.Text = "" Then
+            s = 0
+        Else
+            s = Label1.Text
         End If
+
+        Select Case op
+            Case "+"
+                Label1.Text = (input + Double.Parse(Label1.Text)).ToString
+                Label2.Text = ""
+            Case "-"
+                Label1.Text = (input - Double.Parse(Label1.Text)).ToString
+                Label2.Text = ""
+            Case "*"
+                Label1.Text = (input * Double.Parse(Label1.Text)).ToString
+                Label2.Text = ""
+            Case "/"
+                Label1.Text = (input / Double.Parse(Label1.Text)).ToString
+                Label2.Text = ""
+            Case "^"
+                Label1.Text = (input ^ Double.Parse(Label1.Text)).ToString
+                Label2.Text = ""
+            Case "MOD"
+                Label1.Text = (input Mod Double.Parse(Label1.Text)).ToString
+                Label2.Text = ""
+
+        End Select
+
+        input = Double.Parse(Label1.Text)
+        op = ""
 
     End Sub
 
@@ -223,5 +240,48 @@ Public Class Form1
         Dim a As Double
         a = Convert.ToDouble(Label1.Text) / Convert.ToDouble(100)
         Label1.Text = System.Convert.ToString(a)
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub CheckBox4_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox4.CheckedChanged
+
+    End Sub
+
+    Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
+        Dim a As Double
+        'radians to degrees, we multiply it by 180°/π.
+        a = Convert.ToDouble(Label1.Text) * (Convert.ToDouble(180) / Math.PI)
+        Label1.Text = System.Convert.ToString(a)
+    End Sub
+
+    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+        Dim a As Double
+        ' degrees to radians, we multiply it by π/180°
+        a = Convert.ToDouble(Label1.Text) * (Math.PI / Convert.ToDouble(180))
+        Label1.Text = System.Convert.ToString(a)
+    End Sub
+
+    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
+        Dim ie As Double
+        'ie = Double.Parse(Label1.Text)
+        'Label2.Text = System.Convert.ToString((Label1.Text) + "e")
+        ie = Math.E
+        Label1.Text = System.Convert.ToString(ie)
+
     End Sub
 End Class
