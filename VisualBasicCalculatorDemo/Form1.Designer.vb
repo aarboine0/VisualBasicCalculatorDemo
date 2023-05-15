@@ -28,9 +28,10 @@ Partial Class Form1
         Button1 = New Button()
         MenuStrip1 = New MenuStrip()
         ViewToolStripMenuItem = New ToolStripMenuItem()
-        StandardToolStripMenuItem = New ToolStripMenuItem()
         ScientificToolStripMenuItem = New ToolStripMenuItem()
         UnitConversionToolStripMenuItem = New ToolStripMenuItem()
+        ToolStripMenuItem1 = New ToolStripMenuItem()
+        ToolStripMenuItem2 = New ToolStripMenuItem()
         EditToolStripMenuItem = New ToolStripMenuItem()
         HelpToolStripMenuItem = New ToolStripMenuItem()
         Button2 = New Button()
@@ -41,7 +42,6 @@ Partial Class Form1
         Button7 = New Button()
         Button8 = New Button()
         Button9 = New Button()
-        Button10 = New Button()
         Button11 = New Button()
         Button12 = New Button()
         Button13 = New Button()
@@ -53,7 +53,6 @@ Partial Class Form1
         Button19 = New Button()
         Button20 = New Button()
         Button21 = New Button()
-        Button22 = New Button()
         Button23 = New Button()
         Button24 = New Button()
         Button25 = New Button()
@@ -85,10 +84,31 @@ Partial Class Form1
         Button38 = New Button()
         Button39 = New Button()
         Button40 = New Button()
+        Panel3 = New Panel()
+        Label6 = New Label()
+        TextBox2 = New TextBox()
+        ComboBox1 = New ComboBox()
+        Label7 = New Label()
+        Button41 = New Button()
+        Button42 = New Button()
+        Label8 = New Label()
+        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        Button10 = New Button()
+        Button43 = New Button()
+        Button44 = New Button()
+        Button45 = New Button()
+        Label9 = New Label()
+        Label12 = New Label()
+        Label13 = New Label()
+        ClearHist = New Button()
+        GroupBox1 = New GroupBox()
+        rtbDisplayHist = New TextBox()
         MenuStrip1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
@@ -108,7 +128,7 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(298, 163)
+        Button1.Location = New Point(298, 202)
         Button1.Name = "Button1"
         Button1.Size = New Size(60, 42)
         Button1.TabIndex = 1
@@ -120,34 +140,40 @@ Partial Class Form1
         MenuStrip1.Items.AddRange(New ToolStripItem() {ViewToolStripMenuItem, EditToolStripMenuItem, HelpToolStripMenuItem})
         MenuStrip1.Location = New Point(4, 4)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(920, 24)
+        MenuStrip1.Size = New Size(905, 24)
         MenuStrip1.TabIndex = 2
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' ViewToolStripMenuItem
         ' 
-        ViewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {StandardToolStripMenuItem, ScientificToolStripMenuItem, UnitConversionToolStripMenuItem})
+        ViewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ScientificToolStripMenuItem, UnitConversionToolStripMenuItem, ToolStripMenuItem1, ToolStripMenuItem2})
         ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         ViewToolStripMenuItem.Size = New Size(44, 20)
         ViewToolStripMenuItem.Text = "View"
         ' 
-        ' StandardToolStripMenuItem
-        ' 
-        StandardToolStripMenuItem.Name = "StandardToolStripMenuItem"
-        StandardToolStripMenuItem.Size = New Size(159, 22)
-        StandardToolStripMenuItem.Text = "Standard"
-        ' 
         ' ScientificToolStripMenuItem
         ' 
         ScientificToolStripMenuItem.Name = "ScientificToolStripMenuItem"
-        ScientificToolStripMenuItem.Size = New Size(159, 22)
+        ScientificToolStripMenuItem.Size = New Size(203, 22)
         ScientificToolStripMenuItem.Text = "Scientific"
         ' 
         ' UnitConversionToolStripMenuItem
         ' 
         UnitConversionToolStripMenuItem.Name = "UnitConversionToolStripMenuItem"
-        UnitConversionToolStripMenuItem.Size = New Size(159, 22)
-        UnitConversionToolStripMenuItem.Text = "Unit Conversion"
+        UnitConversionToolStripMenuItem.Size = New Size(203, 22)
+        UnitConversionToolStripMenuItem.Text = "Temperature Conversion"
+        ' 
+        ' ToolStripMenuItem1
+        ' 
+        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        ToolStripMenuItem1.Size = New Size(203, 22)
+        ToolStripMenuItem1.Text = "Unit Conversion"
+        ' 
+        ' ToolStripMenuItem2
+        ' 
+        ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        ToolStripMenuItem2.Size = New Size(203, 22)
+        ToolStripMenuItem2.Text = "History"
         ' 
         ' EditToolStripMenuItem
         ' 
@@ -163,7 +189,7 @@ Partial Class Form1
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(364, 163)
+        Button2.Location = New Point(364, 202)
         Button2.Name = "Button2"
         Button2.Size = New Size(60, 42)
         Button2.TabIndex = 3
@@ -172,7 +198,7 @@ Partial Class Form1
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(430, 163)
+        Button3.Location = New Point(430, 202)
         Button3.Name = "Button3"
         Button3.Size = New Size(60, 42)
         Button3.TabIndex = 4
@@ -182,7 +208,7 @@ Partial Class Form1
         ' Button4
         ' 
         Button4.BackColor = Color.Transparent
-        Button4.Location = New Point(298, 211)
+        Button4.Location = New Point(298, 250)
         Button4.Name = "Button4"
         Button4.Size = New Size(60, 42)
         Button4.TabIndex = 5
@@ -191,7 +217,7 @@ Partial Class Form1
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(364, 211)
+        Button5.Location = New Point(364, 250)
         Button5.Name = "Button5"
         Button5.Size = New Size(60, 42)
         Button5.TabIndex = 6
@@ -200,7 +226,7 @@ Partial Class Form1
         ' 
         ' Button6
         ' 
-        Button6.Location = New Point(430, 211)
+        Button6.Location = New Point(430, 250)
         Button6.Name = "Button6"
         Button6.Size = New Size(60, 42)
         Button6.TabIndex = 7
@@ -209,7 +235,7 @@ Partial Class Form1
         ' 
         ' Button7
         ' 
-        Button7.Location = New Point(298, 259)
+        Button7.Location = New Point(298, 298)
         Button7.Name = "Button7"
         Button7.Size = New Size(60, 42)
         Button7.TabIndex = 8
@@ -218,7 +244,7 @@ Partial Class Form1
         ' 
         ' Button8
         ' 
-        Button8.Location = New Point(364, 259)
+        Button8.Location = New Point(364, 298)
         Button8.Name = "Button8"
         Button8.Size = New Size(60, 42)
         Button8.TabIndex = 9
@@ -227,25 +253,16 @@ Partial Class Form1
         ' 
         ' Button9
         ' 
-        Button9.Location = New Point(430, 259)
+        Button9.Location = New Point(430, 298)
         Button9.Name = "Button9"
         Button9.Size = New Size(60, 42)
         Button9.TabIndex = 10
         Button9.Text = "3"
         Button9.UseVisualStyleBackColor = True
         ' 
-        ' Button10
-        ' 
-        Button10.Location = New Point(298, 355)
-        Button10.Name = "Button10"
-        Button10.Size = New Size(60, 42)
-        Button10.TabIndex = 11
-        Button10.Text = "("
-        Button10.UseVisualStyleBackColor = True
-        ' 
         ' Button11
         ' 
-        Button11.Location = New Point(364, 307)
+        Button11.Location = New Point(364, 346)
         Button11.Name = "Button11"
         Button11.Size = New Size(60, 42)
         Button11.TabIndex = 12
@@ -254,7 +271,7 @@ Partial Class Form1
         ' 
         ' Button12
         ' 
-        Button12.Location = New Point(298, 307)
+        Button12.Location = New Point(298, 346)
         Button12.Name = "Button12"
         Button12.Size = New Size(60, 42)
         Button12.TabIndex = 13
@@ -313,7 +330,7 @@ Partial Class Form1
         ' 
         ' Button18
         ' 
-        Button18.Location = New Point(496, 211)
+        Button18.Location = New Point(496, 250)
         Button18.Name = "Button18"
         Button18.Size = New Size(60, 42)
         Button18.TabIndex = 19
@@ -323,7 +340,7 @@ Partial Class Form1
         ' Button19
         ' 
         Button19.ForeColor = Color.DarkSlateGray
-        Button19.Location = New Point(496, 163)
+        Button19.Location = New Point(496, 202)
         Button19.Name = "Button19"
         Button19.Padding = New Padding(4)
         Button19.Size = New Size(60, 42)
@@ -335,7 +352,7 @@ Partial Class Form1
         ' 
         Button20.BackColor = Color.PowderBlue
         Button20.FlatAppearance.BorderColor = Color.White
-        Button20.Location = New Point(430, 355)
+        Button20.Location = New Point(430, 394)
         Button20.Name = "Button20"
         Button20.Size = New Size(126, 41)
         Button20.TabIndex = 21
@@ -344,25 +361,16 @@ Partial Class Form1
         ' 
         ' Button21
         ' 
-        Button21.Location = New Point(496, 259)
+        Button21.Location = New Point(496, 298)
         Button21.Name = "Button21"
         Button21.Size = New Size(60, 42)
         Button21.TabIndex = 22
         Button21.Text = "/"
         Button21.UseVisualStyleBackColor = True
         ' 
-        ' Button22
-        ' 
-        Button22.Location = New Point(364, 355)
-        Button22.Name = "Button22"
-        Button22.Size = New Size(60, 42)
-        Button22.TabIndex = 23
-        Button22.Text = ")"
-        Button22.UseVisualStyleBackColor = True
-        ' 
         ' Button23
         ' 
-        Button23.Location = New Point(496, 307)
+        Button23.Location = New Point(496, 346)
         Button23.Name = "Button23"
         Button23.Size = New Size(60, 42)
         Button23.TabIndex = 24
@@ -371,7 +379,7 @@ Partial Class Form1
         ' 
         ' Button24
         ' 
-        Button24.Location = New Point(430, 307)
+        Button24.Location = New Point(430, 346)
         Button24.Name = "Button24"
         Button24.Size = New Size(60, 42)
         Button24.TabIndex = 25
@@ -497,7 +505,7 @@ Partial Class Form1
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
         PictureBox1.Location = New Point(4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(920, 476)
+        PictureBox1.Size = New Size(905, 476)
         PictureBox1.TabIndex = 39
         PictureBox1.TabStop = False
         ' 
@@ -519,7 +527,7 @@ Partial Class Form1
         Label3.Name = "Label3"
         Label3.Size = New Size(294, 37)
         Label3.TabIndex = 41
-        Label3.Text = "Unit Converter"
+        Label3.Text = "Temperature"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label4
@@ -543,7 +551,7 @@ Partial Class Form1
         Panel1.Controls.Add(Button37)
         Panel1.Controls.Add(Button36)
         Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(602, 58)
+        Panel1.Location = New Point(1111, 64)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(294, 349)
         Panel1.TabIndex = 43
@@ -656,12 +664,201 @@ Partial Class Form1
         Button40.Text = "asin"
         Button40.UseVisualStyleBackColor = True
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Lavender
+        Panel3.BorderStyle = BorderStyle.Fixed3D
+        Panel3.Controls.Add(Label6)
+        Panel3.Controls.Add(TextBox2)
+        Panel3.Controls.Add(ComboBox1)
+        Panel3.Controls.Add(Label7)
+        Panel3.Controls.Add(Button41)
+        Panel3.Controls.Add(Button42)
+        Panel3.Controls.Add(Label8)
+        Panel3.Location = New Point(1111, 64)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(294, 349)
+        Panel3.TabIndex = 46
+        ' 
+        ' Label6
+        ' 
+        Label6.BorderStyle = BorderStyle.Fixed3D
+        Label6.Location = New Point(65, 199)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(155, 86)
+        Label6.TabIndex = 48
+        Label6.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(95, 135)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(101, 32)
+        TextBox2.TabIndex = 47
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(35, 71)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(221, 33)
+        ComboBox1.TabIndex = 46
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.Location = New Point(17, 93)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(0, 22)
+        Label7.TabIndex = 42
+        ' 
+        ' Button41
+        ' 
+        Button41.Location = New Point(171, 306)
+        Button41.Name = "Button41"
+        Button41.Size = New Size(105, 33)
+        Button41.TabIndex = 43
+        Button41.Text = "Reset"
+        Button41.UseVisualStyleBackColor = True
+        ' 
+        ' Button42
+        ' 
+        Button42.Location = New Point(17, 306)
+        Button42.Name = "Button42"
+        Button42.Size = New Size(105, 33)
+        Button42.TabIndex = 42
+        Button42.Text = "Convert"
+        Button42.UseVisualStyleBackColor = True
+        ' 
+        ' Label8
+        ' 
+        Label8.BackColor = Color.Gainsboro
+        Label8.BorderStyle = BorderStyle.Fixed3D
+        Label8.Font = New Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.Location = New Point(-2, -2)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(294, 37)
+        Label8.TabIndex = 41
+        Label8.Text = "Unit Converter"
+        Label8.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Button10
+        ' 
+        Button10.BackColor = Color.LemonChiffon
+        Button10.Location = New Point(496, 154)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(60, 42)
+        Button10.TabIndex = 48
+        Button10.Text = "M+"
+        Button10.UseVisualStyleBackColor = False
+        ' 
+        ' Button43
+        ' 
+        Button43.BackColor = Color.LavenderBlush
+        Button43.Location = New Point(430, 154)
+        Button43.Name = "Button43"
+        Button43.Size = New Size(60, 42)
+        Button43.TabIndex = 50
+        Button43.Text = "MR"
+        Button43.UseVisualStyleBackColor = False
+        ' 
+        ' Button44
+        ' 
+        Button44.BackColor = Color.Honeydew
+        Button44.Location = New Point(364, 154)
+        Button44.Name = "Button44"
+        Button44.Size = New Size(60, 42)
+        Button44.TabIndex = 51
+        Button44.Text = "M"
+        Button44.UseVisualStyleBackColor = False
+        ' 
+        ' Button45
+        ' 
+        Button45.Location = New Point(169, 414)
+        Button45.Name = "Button45"
+        Button45.Size = New Size(57, 33)
+        Button45.TabIndex = 52
+        Button45.Text = "1/x"
+        Button45.UseVisualStyleBackColor = True
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.Transparent
+        Label9.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.Location = New Point(35, 37)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(78, 25)
+        Label9.TabIndex = 53
+        Label9.Text = "History"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.BackColor = Color.Transparent
+        Label12.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point)
+        Label12.Location = New Point(35, 78)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(190, 25)
+        Label12.TabIndex = 56
+        Label12.Text = "There is no history..."
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.BackColor = Color.Transparent
+        Label13.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.Location = New Point(112, 37)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(88, 25)
+        Label13.TabIndex = 57
+        Label13.Text = "Memory"
+        ' 
+        ' ClearHist
+        ' 
+        ClearHist.Location = New Point(768, 414)
+        ClearHist.Name = "ClearHist"
+        ClearHist.Size = New Size(76, 33)
+        ClearHist.TabIndex = 58
+        ClearHist.Text = "Clear"
+        ClearHist.UseVisualStyleBackColor = True
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(Label9)
+        GroupBox1.Controls.Add(Label13)
+        GroupBox1.Controls.Add(Label12)
+        GroupBox1.Controls.Add(rtbDisplayHist)
+        GroupBox1.Location = New Point(587, 50)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(297, 427)
+        GroupBox1.TabIndex = 59
+        GroupBox1.TabStop = False
+        ' 
+        ' rtbDisplayHist
+        ' 
+        rtbDisplayHist.BackColor = Color.White
+        rtbDisplayHist.BorderStyle = BorderStyle.FixedSingle
+        rtbDisplayHist.Location = New Point(20, 118)
+        rtbDisplayHist.Multiline = True
+        rtbDisplayHist.Name = "rtbDisplayHist"
+        rtbDisplayHist.Size = New Size(262, 301)
+        rtbDisplayHist.TabIndex = 47
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(11F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Black
-        ClientSize = New Size(928, 484)
+        BackColor = Color.CadetBlue
+        ClientSize = New Size(913, 484)
+        Controls.Add(GroupBox1)
+        Controls.Add(ClearHist)
+        Controls.Add(Button45)
+        Controls.Add(Button44)
+        Controls.Add(Button43)
+        Controls.Add(Button10)
+        Controls.Add(Panel3)
         Controls.Add(Button40)
         Controls.Add(Button39)
         Controls.Add(Button38)
@@ -681,7 +878,6 @@ Partial Class Form1
         Controls.Add(Button25)
         Controls.Add(Button24)
         Controls.Add(Button23)
-        Controls.Add(Button22)
         Controls.Add(Button21)
         Controls.Add(Button20)
         Controls.Add(Button19)
@@ -693,7 +889,6 @@ Partial Class Form1
         Controls.Add(Button13)
         Controls.Add(Button12)
         Controls.Add(Button11)
-        Controls.Add(Button10)
         Controls.Add(Button9)
         Controls.Add(Button8)
         Controls.Add(Button7)
@@ -721,6 +916,10 @@ Partial Class Form1
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -729,7 +928,6 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StandardToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ScientificToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UnitConversionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
@@ -742,7 +940,6 @@ Partial Class Form1
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents Button13 As Button
@@ -754,7 +951,6 @@ Partial Class Form1
     Friend WithEvents Button19 As Button
     Friend WithEvents Button20 As Button
     Friend WithEvents Button21 As Button
-    Friend WithEvents Button22 As Button
     Friend WithEvents Button23 As Button
     Friend WithEvents Button24 As Button
     Friend WithEvents Button25 As Button
@@ -786,4 +982,25 @@ Partial Class Form1
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button41 As Button
+    Friend WithEvents Button42 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button43 As Button
+    Friend WithEvents Button44 As Button
+    Friend WithEvents Button45 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents ClearHist As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents rtbDisplayHist As TextBox
 End Class
