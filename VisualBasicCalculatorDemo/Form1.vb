@@ -10,7 +10,7 @@ Public Class Form1
     Dim n As Int32
     Dim found As Boolean = False
     Dim M As Double
-    Dim s As Integer
+    Dim s As Int32
     Dim firstnum, secondnum, q As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -449,6 +449,14 @@ Public Class Form1
         Me.Text = "Scientific Calculator + History"
 
         GroupBox1.Visible = True
+
+    End Sub
+
+    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+        Label1.Text = ""
+    End Sub
+
+    Private Sub rtbDisplayHist_TextChanged(sender As Object, e As EventArgs) Handles rtbDisplayHist.TextChanged
 
     End Sub
 End Class

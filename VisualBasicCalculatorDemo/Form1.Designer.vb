@@ -103,6 +103,8 @@ Partial Class Form1
         ClearHist = New Button()
         GroupBox1 = New GroupBox()
         rtbDisplayHist = New TextBox()
+        Button22 = New Button()
+        Button46 = New Button()
         MenuStrip1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -846,12 +848,33 @@ Partial Class Form1
         rtbDisplayHist.Size = New Size(262, 301)
         rtbDisplayHist.TabIndex = 47
         ' 
+        ' Button22
+        ' 
+        Button22.BackColor = Color.Honeydew
+        Button22.Location = New Point(298, 154)
+        Button22.Name = "Button22"
+        Button22.Size = New Size(60, 42)
+        Button22.TabIndex = 60
+        Button22.Text = "CE"
+        Button22.UseVisualStyleBackColor = False
+        ' 
+        ' Button46
+        ' 
+        Button46.Location = New Point(330, 412)
+        Button46.Name = "Button46"
+        Button46.Size = New Size(75, 23)
+        Button46.TabIndex = 61
+        Button46.Text = "Button46"
+        Button46.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(11F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.CadetBlue
         ClientSize = New Size(913, 484)
+        Controls.Add(Button46)
+        Controls.Add(Button22)
         Controls.Add(GroupBox1)
         Controls.Add(ClearHist)
         Controls.Add(Button45)
@@ -1003,4 +1026,6 @@ Partial Class Form1
     Friend WithEvents ClearHist As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents rtbDisplayHist As TextBox
+    Friend WithEvents Button22 As Button
+    Friend WithEvents Button46 As Button
 End Class
